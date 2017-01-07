@@ -92,8 +92,11 @@ barcode: {
   _Default_ : 25mmx25mm
 
 - **isbn** : overides the value inside the ``<div>``
+  __Default__ : ``None``
 
+For more details, please refer to the _pst-barcode_ documentation :
 
+http://texdoc.net/texmf-dist/doc/generic/pst-barcode/pst-barcode-doc.pdf
 
 Example
 -------------------------------------------------------------------------------
