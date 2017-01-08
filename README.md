@@ -14,6 +14,12 @@ Install
 sudo pip install pandoc-latex-barcode
 ```
 
+or 
+
+```
+docker run -d daamien/pandoc-latex-barcode
+```
+
 Quick Start
 -------------------------------------------------------------------------------
 
