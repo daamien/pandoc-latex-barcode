@@ -4,15 +4,15 @@ COPY . /tmp
 
 WORKDIR /tmp 
 
+# Set the env variables to non-interactive
+ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_PRIORITY critical
+ENV DEBCONF_NOWARNINGS yes
+
 # install latex packages
 RUN apt-get update -y \
   && apt-get install -y --no-install-recommends \
-    texlive-latex-base \
-    texlive-xetex latex-xcolor \
-    texlive-math-extra \
-    texlive-latex-extra \
-    texlive-fonts-extra \
-    texlive-bibtex-extra \
+    texlive-full \
     fontconfig \
     pandoc
 
