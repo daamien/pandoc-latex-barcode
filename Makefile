@@ -18,7 +18,7 @@ install:
 pypi:
 	twine upload $(DIST)/*
 
-test: basic_test  $(TEX) $(PDF) testpypi
+test: basic_test  $(TEX) $(PDF) 
 
 basic_test:
 	echo 'hello world' | pandoc -t json | python -tt ./pandoc_latex_barcode.py 
