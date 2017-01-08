@@ -1,6 +1,9 @@
 pandoc-latex-barcode
 ===============================================================================
 
+[![Build Status](https://travis-ci.org/daamien/pandoc-latex-barcode.svg?branch=master)](https://travis-ci.org/daamien/pandoc-latex-barcode)
+[![Docker Automated Build](https://img.shields.io/docker/automated/daamien/pandoc-latex-barcode.svg)](https://hub.docker.com/r/daamien/pandoc-latex-barcode/)
+
 A pandoc filter to insert barcodes and QR codes in a latex/pdf document
 
 The filter is written in Python with [panflute](http://scorreia.com/software/panflute/) 
