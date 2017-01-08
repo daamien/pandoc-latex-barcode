@@ -37,6 +37,9 @@ testpypi: sdist
 	pip uninstall pandoc-latex-barcode
 	#rmvirtualenv test-pandoc-latex-barcode
 
+docker: 
+	docker build .
+
 clean:
 	rm -f $(PDF)
 	rm -f $(TEX)
