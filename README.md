@@ -26,22 +26,7 @@ docker run -d daamien/pandoc-latex-barcode
 Quick Start
 -------------------------------------------------------------------------------
 
-### 1- Create a specific pandoc template
-
-First you need to the following packages to the latex template :
-
-```latex
-\usepackage{pstricks}
-\usepackage{pst-barcode}
-```
-
-For your convenience, here's a complete one based on the pandoc default latex
-template :
-
-[pandoc-latex-barcode.template.tex](pandoc-latex-barcode.template.tex)
-
-
-### 2- Add a barcode tag to your markdown file
+### 1- Add a barcode tag to your markdown file
 
 
 To generate a generic barcode:
@@ -63,12 +48,11 @@ To generate a QR code:
 ```      
 
 
-### 3- Enjoy !
+### 2- Enjoy !
 
 ```
 pandoc --filter pandoc-latex-barcode \
-       --template ./pandoc_latex_barcode.template.tex \
-       --latex-engine xelatex \
+       --pdf-engine xelatex \
        ./pandoc_latex_barcode.sample.md \ 
        -o ./pandoc_latex_barcode.sample.pdf
 ```
