@@ -18,4 +18,4 @@ RUN apt-get update -y \
 
 RUN pip install pandoc-latex-barcode
 
-RUN pandoc --filter ./pandoc_latex_barcode.py --template ./pandoc_latex_barcode.template.tex --latex-engine xelatex ./pandoc_latex_barcode.sample.md -o ./pandoc_latex_barcode.sample.pdf
+RUN pandoc --filter ./pandoc_latex_barcode.py --latex-engine xelatex ./pandoc_latex_barcode.sample.md -o ./pandoc_latex_barcode.sample.pdf
