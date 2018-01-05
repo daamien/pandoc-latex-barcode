@@ -94,9 +94,9 @@ http://texdoc.net/texmf-dist/doc/generic/pst-barcode/pst-barcode-doc.pdf
 Example
 -------------------------------------------------------------------------------
 
-See [pandoc-latex-barcode.sample.md](pandoc-latex-barcode.sample.md)
+See [pandoc_latex_barcode.sample.md](pandoc_latex_barcode.sample.md)
 
-and [pandoc-latex-barcode.sample.pdf](pandoc-latex-barcode.sample.pdf)
+and [pandoc_latex_barcode.sample.pdf](pandoc_latex_barcode.sample.pdf)
 
 Contributing & Getting Help
 -------------------------------------------------------------------------------
