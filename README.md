@@ -52,7 +52,7 @@ To generate a QR code:
 
 ```
 pandoc --filter pandoc-latex-barcode \
-       --pdf-engine xelatex \
+       --latex-engine xelatex \
        ./pandoc_latex_barcode.sample.md \ 
        -o ./pandoc_latex_barcode.sample.pdf
 ```
