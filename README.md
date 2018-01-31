@@ -39,7 +39,7 @@ First you need to the following packages to the latex template :
 For your convenience, here's a complete one based on the pandoc default latex
 template :
 
-[pandoc-latex-barcode.template.tex](pandoc-latex-barcode.template.tex)
+[pandoc_latex_barcode.template.tex](pandoc_latex_barcode.template.tex)
 
 
 ### 2- Add a barcode tag to your markdown file
@@ -111,9 +111,9 @@ http://texdoc.net/texmf-dist/doc/generic/pst-barcode/pst-barcode-doc.pdf
 Example
 -------------------------------------------------------------------------------
 
-See [pandoc-latex-barcode.sample.md](pandoc-latex-barcode.sample.md)
+See [pandoc_latex_barcode.sample.md](pandoc_latex_barcode.sample.md)
 
-and [pandoc-latex-barcode.sample.pdf](pandoc-latex-barcode.sample.pdf)
+and [pandoc_latex_barcode.sample.pdf](pandoc_latex_barcode.sample.pdf)
 
 Contributing & Getting Help
 -------------------------------------------------------------------------------
