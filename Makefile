@@ -5,7 +5,6 @@ PDF=$(SAMPLE).pdf
 TEX=$(SAMPLE).tex
 
 FILTER=./pandoc_latex_barcode.py
-TEMPLATE=./pandoc_latex_barcode.template.tex
 
 DIST=dist
 
@@ -24,10 +23,10 @@ basic_test:
 	echo 'hello world' | pandoc -t json | python -tt ./pandoc_latex_barcode.py 
 
 %.tex: %.md
-	pandoc --filter $(FILTER) --template $(TEMPLATE) --latex-engine xelatex $(MD) -o $(TEX)
+	pandoc --filter $(FILTER) --latex-engine xelatex $(MD) -o $(TEX)
 
 %.pdf:  %.md
-	pandoc --filter $(FILTER) --template $(TEMPLATE) --latex-engine xelatex $(MD) -o $(PDF)
+	pandoc --filter $(FILTER) --latex-engine xelatex $(MD) -o $(PDF)
 
 testpypi: sdist 
 	twine upload $(DIST)/* -r testpypi
