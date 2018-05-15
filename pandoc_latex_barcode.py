@@ -54,10 +54,10 @@ def action(elem, doc):
 def finalize(doc):
     # Add header-includes if necessary
     if 'header-includes' not in doc.metadata:
-        doc.metadata['header-includes'] = MetaList()
+        doc.metadata['header-includes'] = pf.MetaList()
     # Convert header-includes to MetaList if necessary
-    elif not isinstance(doc.metadata['header-includes'], MetaList):
-        doc.metadata['header-includes'] = MetaList(doc.metadata['header-includes'])
+    elif not isinstance(doc.metadata['header-includes'], pf.MetaList):
+        doc.metadata['header-includes'] = pf.MetaList(doc.metadata['header-includes'])
 
     # Add usefull LaTexPackage
     doc.metadata['header-includes'].append(pf.MetaInlines(pf.RawInline('\\usepackage{pstricks}', 'tex')))
