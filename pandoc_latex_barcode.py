@@ -52,8 +52,16 @@ def action(elem, doc):
             return barcode(doc,data,opt,size)
 
 def finalize(doc):
-    pass
+    # Add header-includes if necessary
+    if 'header-includes' not in doc.metadata:
+        doc.metadata['header-includes'] = pf.MetaList()
+    # Convert header-includes to MetaList if necessary
+    elif not isinstance(doc.metadata['header-includes'], pf.MetaList):
+        doc.metadata['header-includes'] = pf.MetaList(doc.metadata['header-includes'])
 
+    # Add usefull LaTexPackage
+    doc.metadata['header-includes'].append(pf.MetaInlines(pf.RawInline('\\usepackage{pstricks}', 'tex')))
+    doc.metadata['header-includes'].append(pf.MetaInlines(pf.RawInline('\\usepackage{pst-barcode}', 'tex')))
 
 def main(doc=None):
     return pf.run_filter(action,
