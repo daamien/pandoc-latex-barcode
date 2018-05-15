@@ -3,12 +3,13 @@ pandoc-latex-barcode
 
 [![Build Status](https://travis-ci.org/daamien/pandoc-latex-barcode.svg?branch=master)](https://travis-ci.org/daamien/pandoc-latex-barcode)
 [![Docker Automated Build](https://img.shields.io/docker/automated/daamien/pandoc-latex-barcode.svg)](https://hub.docker.com/r/daamien/pandoc-latex-barcode/)
+[![PyPI version](https://badge.fury.io/py/pandoc-latex-barcode.svg)](https://badge.fury.io/py/pandoc-latex-barcode)
 
 A pandoc filter to insert barcodes and QR codes in a latex/pdf document
 
-The filter is written in Python with [panflute](http://scorreia.com/software/panflute/) 
+The filter is written in Python with [panflute](http://scorreia.com/software/panflute/)
 which I recommend if you want to create your own pandoc filters.
- 
+
 
 Install
 -------------------------------------------------------------------------------
@@ -17,7 +18,7 @@ Install
 sudo pip install pandoc-latex-barcode
 ```
 
-or 
+or
 
 ```
 docker run -d daamien/pandoc-latex-barcode
@@ -28,12 +29,11 @@ Quick Start
 
 ### 1- Add a barcode tag to your markdown file
 
-
 To generate a generic barcode:
 
-```                                                                             
-<div class="barcode">Hello World !</div>                                 
-```      
+```
+<div class="barcode">Hello World !</div>
+```
 
 To generate an ISBN barcode:
 
@@ -43,9 +43,9 @@ To generate an ISBN barcode:
 
 To generate a QR code:
 
-```                                                                             
-<div class="qrcode">http://www.pandoc.org</div>                                 
-```      
+```
+<div class="qrcode">http://www.pandoc.org</div>
+```
 
 
 ### 2- Enjoy !
@@ -53,7 +53,7 @@ To generate a QR code:
 ```
 pandoc --filter pandoc-latex-barcode \
        --latex-engine xelatex \
-       ./pandoc_latex_barcode.sample.md \ 
+       ./pandoc_latex_barcode.sample.md \
        -o ./pandoc_latex_barcode.sample.pdf
 ```
 
@@ -68,20 +68,20 @@ Configuration
 There's also few parameters you can setup in the document front matter :
 
 ```yaml
-barcode: {                                                                      
-  barcode_width: '50mm',                                                       
-  barcode_height: '30mm',                                                       
-  qrcode_width: '25mm',                                                         
-  qrcode_height: '25mm' ,                                                       
-  isbn: '123-4-56789-111',                                                      
-}                                                                               
-                                                                                
+barcode: {
+  barcode_width: '50mm',
+  barcode_height: '30mm',
+  qrcode_width: '25mm',
+  qrcode_height: '25mm' ,
+  isbn: '123-4-56789-111',
+}
+
 ```
 
 - **barcode_width** and **barcode_height** defines the size of the barcode.
   _Default_ : 50mmx30mm
 
-- **qrcode_width** and **qrcode_height** defines the size of the QR code. 
+- **qrcode_width** and **qrcode_height** defines the size of the QR code.
   _Default_ : 25mmx25mm
 
 - **isbn** : overides the value inside the ``<div>``
